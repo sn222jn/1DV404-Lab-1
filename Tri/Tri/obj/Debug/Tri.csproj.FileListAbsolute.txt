@@ -4,9 +4,3 @@ X:\LNU\Github\Tri\Tri\bin\Debug\Tri.pdb
 X:\LNU\Github\Tri\Tri\obj\Debug\Tri.csprojResolveAssemblyReference.cache
 X:\LNU\Github\Tri\Tri\obj\Debug\Tri.exe
 X:\LNU\Github\Tri\Tri\obj\Debug\Tri.pdb
-X:\LNU\Github\Uppgift-1\Tri\Tri\bin\Debug\Tri.exe.config
-X:\LNU\Github\Uppgift-1\Tri\Tri\obj\Debug\Tri.exe
-X:\LNU\Github\Uppgift-1\Tri\Tri\obj\Debug\Tri.pdb
-X:\LNU\Github\Uppgift-1\Tri\Tri\bin\Debug\Tri.exe
-X:\LNU\Github\Uppgift-1\Tri\Tri\bin\Debug\Tri.pdb
-X:\LNU\Github\Uppgift-1\Tri\Tri\obj\Debug\Tri.csprojResolveAssemblyReference.cache

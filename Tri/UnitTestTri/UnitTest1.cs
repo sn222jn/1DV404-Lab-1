@@ -39,11 +39,24 @@ namespace UnitTestTri
             Triangle tri = new Triangle(1.1, 1.3, 1.1); // Test to pass.
             Assert.IsTrue(tri.isIsosceles());
 
-            //Triangle tri = new Triangle(1.1, 1.1, 1.1); // Test to fail.
-            //Assert.IsTrue(tri.isIsosceles());            
-
-            //Triangle tri = new Triangle(1, 1.5, 3.7); // Test to fail.
-            //Assert.IsTrue(tri.isIsosceles());
+        }
+        [TestMethod]
+        public void isIsoscelesTestToFail()
+        {
+            Triangle tri = new Triangle(1, 1.5, 3.7); // Test to fail.
+            Assert.IsFalse(tri.isIsosceles());
+        }
+        [TestMethod]
+        public void isEquilateralTestToFail()
+        {
+            Triangle tri = new Triangle(1.1, 1.3, 1.1); // Test to fail.
+            Assert.IsFalse(tri.isEquilateral());
+        }
+        [TestMethod]
+        public void isScaleneTestToFail()
+        {
+            Triangle tri = new Triangle(1.1, 1.1, 1.1); // Test to fail.
+            Assert.IsFalse(tri.isScalene());
         }
 
         [TestMethod]
@@ -92,12 +105,17 @@ namespace UnitTestTri
             Assert.IsTrue(tri.isIsosceles());
         }
 
-        //[TestMethod]
-        //[ExpectedException(typeof(ArgumentNullException))]
-        //public void nullTest()
-        //{
-        //    //var obj = new Triangle(null);
-        //}
+        [TestMethod]
+        [ExpectedException(typeof(IndexOutOfRangeException))]
+        public void indexExceptionTest()
+        {
+            {
+                
+                Triangle tri = new Triangle(-1.1, -1, -1);
+                Assert.Fail("Inget undantag kastas!");
+
+            }
+        }
 
         [TestMethod]
         public void pointArrayTest()
@@ -106,7 +124,7 @@ namespace UnitTestTri
             Point pB = new Point(6, 2);
             Point pC = new Point(4, 8);
 
-            Point[] pointArray = new Point[] {pA, pB, pC};
+            Point[] pointArray = new Point[] { pA, pB, pC };
 
             Triangle tri = new Triangle(pointArray);
             Assert.IsTrue(tri.isIsosceles()); // Scalene passes, it should be an Isosceles
@@ -116,7 +134,7 @@ namespace UnitTestTri
         [TestMethod]
         public void doubleArrayTest()
         {
-            double[] doubleArray = new double[] {3.3, 3.3, 3.3};
+            double[] doubleArray = new double[] { 3.3, 3.3, 3.3 };
 
             Triangle tri = new Triangle(doubleArray);
             Assert.IsTrue(tri.isEquilateral());

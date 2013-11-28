@@ -34,7 +34,7 @@ public class Triangle {
   public Triangle(Point[] s) {
     sides = new double[s.Length];
     sides[0] = Math.Sqrt(Math.Pow((double)(s[1].x - s[0].x), 2.0) + Math.Pow((double)(s[1].y - s[0].y), 2.0));
-    sides[1] = Math.Sqrt(Math.Pow((double)(s[1].x - s[2].x), 2.0) + Math.Pow((double)(s[1].x - s[2].x), 2.0));
+    sides[1] = Math.Sqrt(Math.Pow((double)(s[1].x - s[2].x), 2.0) + Math.Pow((double)(s[1].x - s[0].x), 2.0)); // Changed last [] from 2 to 1.
     sides[2] = Math.Sqrt(Math.Pow((double)(s[2].x - s[0].x), 2.0) + Math.Pow((double)(s[2].x - s[0].x), 2.0));
   }
 
@@ -61,17 +61,4 @@ public class Triangle {
   }
 }
 
-/* Exempel på användning: */
-/* class Program { */
-/*   static void Main(string[] args) { */
-/*     double[] input = new double[3]; */
-/*     for(int i=0;i<3;i++) */
-/*       input[i]=double.Parse(args[i]); */
-    
-/*     Triangle t = new Triangle(input); */
 
-/*     if(t.isScalene()) Console.WriteLine("Triangeln har inga lika sidor"); */
-/*     if(t.isEquilateral()) Console.WriteLine("Triangeln är liksidig"); */
-/*     if(t.isIsosceles()) Console.WriteLine("Triangeln är likbent"); */
-/*  } */
-/* } */
