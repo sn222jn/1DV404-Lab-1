@@ -84,9 +84,9 @@ namespace UnitTestTri
         [TestMethod]
         public void pointTest()
         {
-            Point pA = new Point(2, 0);
-            Point pB = new Point(0, 4);
-            Point pC = new Point(-2, 0);
+            Point pA = new Point(0, 0);
+            Point pB = new Point(6, 2);
+            Point pC = new Point(4, 8);
 
             Triangle tri = new Triangle(pA, pB, pC);
             Assert.IsTrue(tri.isIsosceles());
@@ -99,11 +99,13 @@ namespace UnitTestTri
         //    //var obj = new Triangle(null);
         //}
 
-        //[TestMethod]
-        //public void pointTest()
-        //{
-
-        //}
+        [TestMethod]
+        public void pointArrayTest()
+        {
+            Point pA = new Point(0, 0);
+            Point pB = new Point(6, 2);
+            Point pC = new Point(4, 8);
+        }
 
 
     }
