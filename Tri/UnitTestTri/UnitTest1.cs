@@ -105,6 +105,12 @@ namespace UnitTestTri
             Point pA = new Point(0, 0);
             Point pB = new Point(6, 2);
             Point pC = new Point(4, 8);
+
+            Point[] pointArray = new Point[] {pA, pB, pC};
+
+            Triangle tri = new Triangle(pointArray);
+            Assert.IsTrue(tri.isIsosceles()); // Scalene passes, it should be an Isosceles
+
         }
 
 
