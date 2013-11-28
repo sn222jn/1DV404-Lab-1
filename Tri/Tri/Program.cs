@@ -10,8 +10,7 @@ namespace Tri
     {
         static void Main(string[] args)
         {
-            //Triangle tri = new Triangle(0.0, 2.3, 0.3);
-            Triangle tri = new Triangle(-1, -1, -1);
+
         }
     }
 }
