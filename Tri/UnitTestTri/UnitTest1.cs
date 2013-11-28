@@ -113,6 +113,17 @@ namespace UnitTestTri
 
         }
 
+        [TestMethod]
+        public void doubleArrayTest()
+        {
+            double[] doubleArray = new double[] {3.3, 3.3, 3.3};
+
+            Triangle tri = new Triangle(doubleArray);
+            Assert.IsTrue(tri.isEquilateral());
+
+        }
+
+
 
     }
 }
