@@ -53,7 +53,7 @@ namespace UnitTestTri
 
             Assert.IsTrue(tri.isEquilateral());
 
-            //Assert.IsTrue(tri.isScalene()); // This test passes
+            //Assert.IsTrue(tri.isScalene()); // This test passed before making corrections to source code
 
             //Assert.IsTrue(tri.isIsosceles());
         }
@@ -62,7 +62,7 @@ namespace UnitTestTri
         {
             Triangle tri = new Triangle(0.0, -2.0, 0.3);
 
-            //Assert.IsTrue(tri.isEquilateral()); // This test passes
+            //Assert.IsTrue(tri.isEquilateral()); // This test passed before making corrections to source code
 
             Assert.IsTrue(tri.isScalene());
 
@@ -76,7 +76,7 @@ namespace UnitTestTri
 
             Assert.IsTrue(tri.isEquilateral()); // Should be nullexception
 
-            //Assert.IsTrue(tri.isScalene()); // This test passes
+            //Assert.IsTrue(tri.isScalene()); // This test passed before making corrections to source code
 
             //Assert.IsTrue(tri.isIsosceles());
         }
@@ -84,16 +84,20 @@ namespace UnitTestTri
         [TestMethod]
         public void pointTest()
         {
-            Point p = new Point(0, 0);
+            Point pA = new Point(2, 0);
+            Point pB = new Point(0, 4);
+            Point pC = new Point(-2, 0);
 
+            Triangle tri = new Triangle(pA, pB, pC);
+            Assert.IsTrue(tri.isIsosceles());
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void nullTest()
-        {
-            //var obj = new Triangle(null);
-        }
+        //[TestMethod]
+        //[ExpectedException(typeof(ArgumentNullException))]
+        //public void nullTest()
+        //{
+        //    //var obj = new Triangle(null);
+        //}
 
         //[TestMethod]
         //public void pointTest()
